@@ -17,7 +17,7 @@
     "test:expense:backend:features": "NODE_ENV=test cucumber-js -p expense_service",
     "build": "npm run build:clean && npm run build:tsc && npm run build:di",
     "build:tsc": "tsc -p tsconfig.json",
-    "build:di": "copy 'src/**/*.{json,yaml,html,png}' dist/src",
+    "build:di": "copyfiles 'src/**/*.{json,yaml,html,png}' dist/src",
     "build:clean": "rm -r dist; exit 0",
     "dev:expense": "NODE_ENV=dev ts-node-dev --ignore-watch node_modules ./src/apps/expense/backend/start.ts"
   },
@@ -29,7 +29,7 @@
     "connect-flash": "^0.1.1",
     "cookie-parser": "^1.4.6",
     "cookie-session": "^2.0.0",
-    "copy": "^0.0.1",
+    "copyfiles": "^2.4.1",
     "errorhandler": "^1.5.1",
     "express": "^4.18.2",
     "express-promise-router": "^4.1.1",
