@@ -9,7 +9,7 @@
     "npm": ">=9.2.0"
   },
   "scripts": {
-    "lint": "eslint --ignore-path .gitignore .",
+    "lint": "eslint",
     "lint:fix": "npm run lint -- --fix",
     "test": "npm run test:unit && npm run test:features",
     "test:unit": "NODE_ENV=test jest",
