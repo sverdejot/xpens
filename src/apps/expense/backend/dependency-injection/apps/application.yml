@@ -6,4 +6,7 @@ services:
 
   Apps.expense.controllers.ExpensePUTController:
     class: ../../controllers/ExpensePUTController
-    arguments: []
+    arguments: [
+      "@Expense.application.ExpenseCreator"
+    ]
+      

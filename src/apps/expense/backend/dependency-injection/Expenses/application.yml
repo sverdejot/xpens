@@ -1,0 +1,10 @@
+services:
+  Expense.application.ExpenseCreator:
+    class: ../../../../../contexts/Expense/application/ExpenseCreator
+    arguments: [
+      "@Expense.domain.ExpenseRepository"
+    ]
+  
+  Expense.domain.ExpenseRepository:
+    class: ../../../../../contexts/Expense/infrastructure/persistence/FileExpenseRepository
+    arguments: []
