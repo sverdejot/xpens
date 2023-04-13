@@ -1,2 +1,3 @@
 imports:
   - { resource: ./apps/application.yml }
+  - { resource: ./Expenses/application.yml}

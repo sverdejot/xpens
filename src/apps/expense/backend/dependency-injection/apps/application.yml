@@ -3,3 +3,10 @@ services:
   Apps.expense.controllers.HealthGETController:
     class: ../../controllers/HealthGETController
     arguments: []
+
+  Apps.expense.controllers.ExpensePUTController:
+    class: ../../controllers/ExpensePUTController
+    arguments: [
+      "@Expense.application.ExpenseCreator"
+    ]
+      
