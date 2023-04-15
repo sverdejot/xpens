@@ -1,11 +1,13 @@
+import { UUID } from "../../Shared/domain/value-object/UUID"
+
 export class Expense {
-    readonly id         : string
+    readonly id         : UUID
     readonly description: string
     readonly amount     : number
     readonly currency   : string
     readonly date       : number
 
-    constructor(id: string, description:string, amount:number, currency:string, date:number) {        
+    constructor(id: UUID, description:string, amount:number, currency:string, date:number) {        
         this.id             = id
         this.description    = description
         this.amount         = amount

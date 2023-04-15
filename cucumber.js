@@ -10,5 +10,5 @@ const expense_service = [
 ].join(' ');
 
 module.exports = {
-    expense_service
+    expense_service,
 };

@@ -11,9 +11,10 @@ export class ExpensePUTController implements Controller {
     };
 
     async run(req: Request, res: Response): Promise<void> {
-        const {id, description, amount, currency, date} = req.body;
+        const id = req.params.id;
+        const {description, amount, currency, date} = req.body;
 
-        await this.creator.run(id, description, amount, currency, date);
+        await this.creator.run({ id, description, amount, currency, date });
         
         res.status(httpStatus.CREATED).send();
     }
